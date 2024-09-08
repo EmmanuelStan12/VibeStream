@@ -1,21 +1,12 @@
 plugins {
     kotlin("jvm")
-}
-
-group = "com.bytebard"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+    id("org.springframework.boot") version "3.3.1"
+    id("io.spring.dependency-management") version "1.1.5"
+    kotlin("plugin.spring") version "1.9.24"
+    kotlin("plugin.allopen") version "1.9.24"
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(11)
+    implementation(project(":core:api"))
+    implementation(project(":features:auth"))
 }
