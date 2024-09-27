@@ -6,3 +6,5 @@ include("features:auth")
 include("app")
 include("security")
 include("core:api")
+include("core:testing")
+findProject(":core:testing")?.name = "testing"

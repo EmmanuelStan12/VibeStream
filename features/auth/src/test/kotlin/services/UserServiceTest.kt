@@ -1,0 +1,4 @@
+package services
+
+class UserServiceTest {
+}
